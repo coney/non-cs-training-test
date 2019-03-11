@@ -1,35 +1,8 @@
-package com.thoughtworks.training.test;
+非计测试题目-后端
+----
 
-import com.thoughtworks.training.test.task3.Person;
-import com.thoughtworks.training.test.task3.Student;
-import com.thoughtworks.training.test.task3.Teacher;
-import com.thoughtworks.training.test.task4.Score;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
-
-import java.util.Arrays;
-import java.util.List;
-
-import static org.hamcrest.CoreMatchers.is;
-import static org.junit.Assert.assertThat;
-
-public class SubjectTest {
-
-    @Rule
-    public ExpectedException exceptionRule = ExpectedException.none();
-
-    /**
-     * task 0: 两整数相加(环境验证)
-     * 将参数传入的两个整数相加, 返回相加结果
-     * task 0用于验证测试环境可用, 运行该测试用例, 确保用例执行通过. 若不通过则请在答题前解决编译或运行问题
-     */
-    @Test
-    public void task_0() {
-        assertThat(Subject.solveTask0(1, 2), is(3));
-    }
-
-    /**
+``` java
+ /**
      * task 1: 数组过滤及累加
      * 从输入的数据中过滤掉所有奇数, 将剩余的偶数累加并返回
      */
@@ -140,5 +113,11 @@ public class SubjectTest {
                 "}";
         assertThat(Subject.solveTask5(input2), is("bob:male:91"));
     }
+```
 
-}
+考察点:
+- Task 1 基本操作, for循环, if语句
+- Task 2 字符串拆分, 解析, 构建
+- Task 3 继承, 封装, 多态
+- Task 4 Java Stream API, Lambda, Optional, Exception 
+- Task 5 Json 反序列化
