@@ -3,7 +3,7 @@ package com.thoughtworks.training.test;
 import com.thoughtworks.training.test.task3.Person;
 import com.thoughtworks.training.test.task3.Student;
 import com.thoughtworks.training.test.task3.Teacher;
-import com.thoughtworks.training.test.task4.Score;
+import com.thoughtworks.training.test.task5.Score;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.rules.ExpectedException;
@@ -46,20 +46,10 @@ public class SubjectTest {
     }
 
     /**
-     * task 2: 数字字符串拆分及累加
-     * 输入字符串包含若干以逗号分隔的整数, 请解析输入并将所有数字累加以字符串形式返回
+     * task 2: 简答
+     * Java中的重写（Overriding）和重载（Overloading）是什么意思
      */
-    @Test
-    public void task_2() {
-        final String input1 = "1,1,1,1";
-        assertThat(Subject.solveTask2(input1), is("4"));
 
-        final String input2 = "1,2,3,4";
-        assertThat(Subject.solveTask2(input2), is("10"));
-
-        final String input3 = "1,1,2,3,5,8,13,21,34,55,89,144";
-        assertThat(Subject.solveTask2(input3), is("376"));
-    }
 
     /**
      * task 3: 学生与老师类的抽象与继承
@@ -76,14 +66,21 @@ public class SubjectTest {
     }
 
     /**
-     * task 4: 根据输入的成绩单列表过滤及格的(60分及格线)成绩, 并输出成绩最高的成绩单姓名
+     * task 4: 简答
+     * 电器是指以电能来进行驱动的用具，冰箱、烤箱、蒸箱、微波炉都是电器，
+     * 现在市面上出现了一种集成度更高的产品，同时具备蒸、烤、微波的一体机。
+     * 请根据你对这些电器的理解来设计类/接口
+     */
+
+    /**
+     * task 5: 根据输入的成绩单列表过滤及格的(60分及格线)成绩, 并输出成绩最高的成绩单姓名
      * 1. 过滤掉所有不及格成绩
      * 2. 从及格成绩中找出得分最高的成绩单并以字符串返回姓名
      * 3. 如果没有及格成绩则跑出RuntimeException
      * 请优先使用Java Stream API及Lambda
      */
     @Test
-    public void task_4() {
+    public void task_5() {
         final Score alice = new Score("alice", 87);
         final Score bob = new Score("bob", 45);
         final Score charlie = new Score("charlie", 59);
@@ -102,43 +99,4 @@ public class SubjectTest {
         exceptionRule.expect(RuntimeException.class);
         Subject.solveTask4(scoreList3);
     }
-
-    /**
-     * task 5: 从Json中读取成绩单并按照要求格式以字符串输出
-     * <p>
-     * 输入Json内容如下:
-     * input1:
-     * {
-     * "name": "alice",
-     * "gender": "female",
-     * "score": 87.5
-     * }
-     * input2:
-     * {
-     * "name": "bob",
-     * "gender": "male",
-     * "score": 91
-     * }
-     * <p>
-     * 输出: 以冒号(:)拼接的字符串, 包含名字, 性别及成绩
-     */
-    @Test
-    public void task_5() throws Exception {
-        String input1 = "" +
-                "{" +
-                "  \"name\": \"alice\"," +
-                "  \"gender\": \"female\"," +
-                "  \"score\": 87" +
-                "}";
-        assertThat(Subject.solveTask5(input1), is("alice:female:87"));
-
-        String input2 = "" +
-                "{" +
-                "  \"name\": \"bob\"," +
-                "  \"gender\": \"male\"," +
-                "  \"score\": 91" +
-                "}";
-        assertThat(Subject.solveTask5(input2), is("bob:male:91"));
-    }
-
 }

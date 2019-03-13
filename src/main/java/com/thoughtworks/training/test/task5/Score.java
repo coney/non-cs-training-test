@@ -1,4 +1,4 @@
-package com.thoughtworks.training.test.task4;
+package com.thoughtworks.training.test.task5;
 
 public class Score {
     private String name;
