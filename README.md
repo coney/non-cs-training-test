@@ -82,6 +82,7 @@ public void task_3() {
 1. 过滤掉所有不及格成绩
 2. 从及格成绩中找出得分最高的成绩单并以字符串返回姓名
 3. 如果没有及格成绩则跑出RuntimeException
+
 **请优先使用Java Stream API及Lambda**
 
 ```java
