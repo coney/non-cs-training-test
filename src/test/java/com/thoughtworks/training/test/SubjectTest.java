@@ -3,6 +3,7 @@ package com.thoughtworks.training.test;
 import com.thoughtworks.training.test.task3.Person;
 import com.thoughtworks.training.test.task3.Student;
 import com.thoughtworks.training.test.task3.Teacher;
+import com.thoughtworks.training.test.task5.NotFoundException;
 import com.thoughtworks.training.test.task5.Score;
 import org.junit.Rule;
 import org.junit.Test;
@@ -96,7 +97,7 @@ public class SubjectTest {
 
         // 当没有成绩及格时, 抛出RuntimeException
         final List<Score> scoreList3 = Arrays.asList(bob, charlie);
-        exceptionRule.expect(RuntimeException.class);
+        exceptionRule.expect(NotFoundException.class);
         Subject.solveTask4(scoreList3);
     }
 }
