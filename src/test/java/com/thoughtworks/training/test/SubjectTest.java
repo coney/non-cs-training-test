@@ -77,7 +77,7 @@ public class SubjectTest {
      * task 5: 根据输入的成绩单列表过滤及格的(60分及格线)成绩, 并输出成绩最高的成绩单姓名
      * 1. 过滤掉所有不及格成绩
      * 2. 从及格成绩中找出得分最高的成绩单并以字符串返回姓名
-     * 3. 如果没有及格成绩则跑出RuntimeException
+     * 3. 如果没有及格成绩则跑出NotFoundException
      * 请优先使用Java Stream API及Lambda
      */
     @Test
